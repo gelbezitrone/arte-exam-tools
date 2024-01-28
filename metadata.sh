@@ -9,7 +9,7 @@ if [ "$(command -v curl)" ]; then
     #aws_req="curl -u student:htARTE-training -s -f"
     aws_req="curl -s -f"
 elif [ "$(command -v wget)" ]; then
-    aws_req="wget -q -O - -H '$HEADER'"
+    aws_req="wget -q -O -"
 else 
     echo "Neither curl nor wget were found, I can't enumerate the metadata service :("
 fi
